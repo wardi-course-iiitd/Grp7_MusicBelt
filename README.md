@@ -1,6 +1,6 @@
 # Grp7_MusicBelt
 A Musical seatbelt for kids
-![alt text](https://github.com/dewansh15025/wardi-project/blob/master/wardi_circuit.png)
+![alt text](https://github.com/wardi-course-iiitd/Grp7_MusicBelt/blob/master/wardi_circuit.png)
 (Thanks to circuito.io for seamless creation of schematic)
 # Components:
 1)Arduino nano
