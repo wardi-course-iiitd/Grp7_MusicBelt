@@ -9,6 +9,6 @@ A Musical seatbelt for kids\
 4)buttons\
 5)bluetooth module\
 6)sd card module\
-# Components:
+# code:
 code can be found in final_wardi_code.ino
 
