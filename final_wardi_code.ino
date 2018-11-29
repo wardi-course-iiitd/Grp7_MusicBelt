@@ -4,13 +4,13 @@
 #include "SPI.h"
 
 int buttonSelector=0;
-TMRpcm tmrpcm;
-int analogPin = 0;
+TMRpcm tmrpcm; // object which plays sound
+int analogPin = 0; // for array of button value read
 int val = 0; 
 int flag;
 int c;
-#define ledPin 7
-int state ;
+#define ledPin 7 // was used during testing
+int state ; // captures the genre
 
 void setup()
 {
@@ -18,8 +18,8 @@ void setup()
   Serial.begin(9600);
   
   if(!SD.begin(SD_ChipSelectPin))
-  {
-    Serial.println("SD fail");
+  { 
+    Serial.println("SD fail");  // if sd card read is failed or some other I/O error
     return;
   }
   
@@ -45,8 +45,7 @@ void loop()
       Serial.println("button0"); // Send back, to the phone, the String "LED: ON"
       state = 0;
       flag = 0;
-      Serial.println("bitch");
-      Serial.println(0);
+      
       
   //Serial.println(state);;
   /* the code below choses the music from the selected set
@@ -58,8 +57,7 @@ void loop()
       Serial.println("button1");
       state = 1;
       flag = 1;
-      Serial.println("bitch");
-      Serial.println(1);
+      
       /* the code below choses the music from the selected set
       of music*/ 
      } 
@@ -70,8 +68,7 @@ void loop()
       Serial.println("button2");
       state = 2;
       flag = 2;
-      Serial.println("bitch");
-      Serial.println(2);
+      
       /* the code below choses the music from the selected set
       of music*/   
      
@@ -83,8 +80,7 @@ void loop()
         Serial.println("button3");;
         state = 3;
         flag = 3;
-        Serial.println("bitch");
-      Serial.println(3);
+       
         /* the code below choses the music from the selected set
         of music*/ 
      } 
@@ -93,8 +89,7 @@ void loop()
   
       Serial.println("button4");;
       state = 4;
-      Serial.println("bitch");
-      Serial.println(4);
+      
       /* the code below choses the music from the selected set
   of music*/
       }
@@ -105,25 +100,25 @@ void loop()
     {
       tmrpcm.setVolume(6);
       tmrpcm.play("14.wav");
-//      Serial.println("animalalphabet-1.wav");
+
     }
     else if (buttonSelector/100==2)
     {
         tmrpcm.setVolume(6);
         tmrpcm.play("13.wav");
-//        Serial.println("animalalphabet-2.wav");
+
     }
     else if(buttonSelector/100==9)
     {
         tmrpcm.setVolume(6);
         tmrpcm.play("12.wav");
-//        Serial.println("animalalphabet-3.wav");
+
     }
     else if(buttonSelector/100==6)
     {
         tmrpcm.setVolume(6);
         tmrpcm.play("11.wav");
-//        Serial.println("animalalphabet.wav");
+
     }
     else if(buttonSelector/100==4)
     {
@@ -140,25 +135,25 @@ void loop()
     {
       tmrpcm.setVolume(6);
       tmrpcm.play("21.wav");
-//      Serial.println("animalalphabet-1.wav");
+
     }
     else if (buttonSelector/100==2)
     {
         tmrpcm.setVolume(6);
         tmrpcm.play("22.wav");
-//        Serial.println("animalalphabet-2.wav");
+
     }
     else if(buttonSelector/100==9)
     {
         tmrpcm.setVolume(6);
         tmrpcm.play("21.wav");
-//        Serial.println("animalalphabet-3.wav");
+
     }
     else if(buttonSelector/100==6)
     {
         tmrpcm.setVolume(6);
         tmrpcm.play("jj.wav");
-//        Serial.println("animalalphabet.wav");
+
     }
     else if(buttonSelector/100==4)
     {
